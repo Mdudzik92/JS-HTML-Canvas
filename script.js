@@ -18,7 +18,6 @@ let direction = true;
 function draw(e) {
 	// Stops the function from running when they're not moused
 	if (!isDrawing) return;
-	console.log(e);
 	// Adding color, starting at red hue
 	ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
 	ctx.beginPath();
