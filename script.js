@@ -5,6 +5,7 @@ canvas.height = window.innerHeight;
 ctx.strokeStyle = "#COOL";
 ctx.lineJoin = "round";
 ctx.lineCap = "round";
+ctx.lineWidth = 100;
 
 let isDrawing = false;
 // Where we start the line from
