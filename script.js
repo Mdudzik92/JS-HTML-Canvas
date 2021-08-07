@@ -21,9 +21,16 @@ function draw(e) {
 	ctx.moveTo(lastX, lastY);
 	ctx.lineTo(e.offsetX, e.offsetY);
 	ctx.stroke();
+	// Destructuring an array in one line with ES6
+	[lastX, lastY] = [e.offsetX, e.offsetY];
 }
 
+// As soon as the user clicks the mouse down to start it, we update the lastX and lastY
+canvas.addEventListener("mousedown", (e) => {
+	isDrawing = true;
+	[lastX, lastY] = [e.offsetX, e.offsetY];
+});
+
 canvas.addEventListener("mousemove", draw);
-canvas.addEventListener("mousedown", () => (isDrawing = true));
 canvas.addEventListener("mouseup", () => (isDrawing = false));
 canvas.addEventListener("mouseout", () => (isDrawing = false));
