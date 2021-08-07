@@ -16,6 +16,11 @@ function draw(e) {
 	// Stops the function from running when they're not moused
 	if (!isDrawing) return;
 	console.log(e);
+	ctx.beginPath();
+	// Starting and ending our lines
+	ctx.moveTo(lastX, lastY);
+	ctx.lineTo(e.offsetX, e.offsetY);
+	ctx.stroke();
 }
 
 canvas.addEventListener("mousemove", draw);
